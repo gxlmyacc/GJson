@@ -1066,7 +1066,7 @@ begin
     begin
       PtrTrimEnd := PtrEnd;
       _TrimCharsFromEnd(PtrBegin, PtrTrimEnd);
-      if PtrTrimEnd <= PtrBegin then
+      if PtrTrimEnd < PtrBegin then
         continue;
 
       SetLength(StrItem, PtrTrimEnd - PtrBegin);
@@ -2529,7 +2529,7 @@ end;
 procedure TJsonObject._ParseFind(const PaserStr: PJsonChar; const AIndex: Integer; 
   const ASplitStr: JsonString; const AParsing: Boolean);
 begin
-  if AParsing then
+  if AParsing and (ASplitStr <> '') then
     AddPair(TJsonPair.CreateForParse(Self, PJsonChar(ASplitStr), System.Length(ASplitStr)));
 end;
 
