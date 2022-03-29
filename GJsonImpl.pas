@@ -1989,7 +1989,7 @@ procedure TJsonArray._ParseFind(const PaserStr: PJsonChar;
 var
   LItem: IJsonValue;
 begin
-  if AParsing then
+  if AParsing and (ASplitStr <> '') then
   begin
     LItem := TJsonValue.Create(PJsonChar(ASplitStr), System.Length(ASplitStr));
     FList.Add(LItem);

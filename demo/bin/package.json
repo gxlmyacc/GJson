@@ -1,0 +1,9 @@
+{
+  "name": "iit-xinsb",
+  "version": "1.0.0",
+  "keywords": [
+    "iit-xinsb",
+    "iit",
+  ],
+  "main": "index.js",
+}
